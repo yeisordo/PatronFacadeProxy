@@ -16,6 +16,16 @@ public class Customer {
     private String mobile;
     private String city;
 
+    public Customer(int id, String name, String address, String mobile, String city) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.mobile = mobile;
+        this.city = city;
+    }
+
+    
+    
     public Customer() {
     }
 

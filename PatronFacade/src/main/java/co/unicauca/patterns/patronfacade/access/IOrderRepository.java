@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronfacade.domain.presentacion;
+package co.unicauca.patterns.patronfacade.access;
 
 import co.unicauca.patterns.patronfacade.domain.Order;
+
 
 /**
  *
  * @author kevith bastidas
  */
-public class OderFacade {
-    private Order order;
-    
+public interface IOrderRepository {
+    public void createOrder(Order order);
 }

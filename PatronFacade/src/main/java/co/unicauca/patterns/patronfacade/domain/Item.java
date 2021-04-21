@@ -13,6 +13,13 @@ public class Item {
     private Dish dish;
     private int amount;
 
+    public Item(Dish dish, int amount) {
+        this.dish = dish;
+        this.amount = amount;
+    }
+
+    
+    
     public Item() {
     }
 

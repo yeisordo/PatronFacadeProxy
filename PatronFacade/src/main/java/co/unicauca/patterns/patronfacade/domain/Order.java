@@ -28,8 +28,8 @@ public class Order {
         this.details = new ArrayList<>();
     }
     
-    public void addDish(Dish dish, int amount){
-        
+    public void addDish(Dish dish, int amount){      
+        this.details.add(new Item(dish, amount));
     }
     
     public int calculateTotal(){
