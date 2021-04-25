@@ -8,10 +8,6 @@ import co.unicauca.patterns.patronfacade.domain.Customer;
 import co.unicauca.patterns.patronfacade.domain.Dish;
 import co.unicauca.patterns.patronfacade.domain.order.stat.State;
 import co.unicauca.patterns.patronfacade.domain.OrderFacade;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

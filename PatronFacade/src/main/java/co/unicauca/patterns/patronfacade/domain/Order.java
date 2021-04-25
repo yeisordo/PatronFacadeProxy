@@ -5,9 +5,6 @@
  */
 package co.unicauca.patterns.patronfacade.domain;
 
-import co.unicauca.patterns.patronfacade.domain.Customer;
-import co.unicauca.patterns.patronfacade.domain.Dish;
-import co.unicauca.patterns.patronfacade.domain.Item;
 import co.unicauca.patterns.patronfacade.domain.order.stat.State;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -26,6 +23,7 @@ public class Order {
     public Order(Customer customer) {
         this.customer = customer;
         this.details = new ArrayList<>();
+        this.state = State.NEW;
     }
     
     public void addDish(Dish dish, int amount){      
@@ -33,7 +31,11 @@ public class Order {
     }
     
     public int calculateTotal(){
-        return 0;
+        int total = 0;
+        for (Item item : this.details) {
+            total += item.getDish().getPrice() * item.getAmount();
+        }
+        return total;
     }
 
     public int getDespatch() {

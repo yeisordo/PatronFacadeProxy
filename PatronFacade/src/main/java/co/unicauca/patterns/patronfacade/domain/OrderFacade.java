@@ -18,7 +18,6 @@ public class OrderFacade {
     
     public void createOrder(Customer customer){
         this.order = new Order(customer);
-        changeState(State.NEW);
     }
     
     public void addDish(Dish dish, int amount){
@@ -36,13 +35,10 @@ public class OrderFacade {
         changeState(State.CANCELLED);
     }
     public int calculateTotal(){
-        int total = 0;
         if (this.order!=null) {
-            for (Item item : this.order.getDetails()) {
-                total += item.getDish().getPrice() * item.getAmount();
-            }
+            return this.order.calculateTotal();
         }
-        return total;
+        return 0;
     }
     
     public Order getOrder(){
