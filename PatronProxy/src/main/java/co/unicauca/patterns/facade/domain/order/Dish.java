@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.patterns.facade.domain.order;
 
 /**
@@ -14,6 +9,12 @@ public class Dish {
     private String name;
     private int price;
 
+    /**
+     * constructor
+     * @param id
+     * @param name
+     * @param price 
+     */
     public Dish(int id, String name, int price) {
         this.id = id;
         this.name = name;
@@ -21,7 +22,9 @@ public class Dish {
     }
 
     
-    
+    /**
+     * constructor por defecto
+     */
     public Dish() {
     }
 
