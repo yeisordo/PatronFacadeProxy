@@ -5,6 +5,7 @@
  */
 package co.unicauca.patterns.patronfacade.domain.presentacion;
 
+import co.unicauca.patterns.patronfacade.domain.OrderFacade;
 import co.unicauca.patterns.patronfacade.access.Factory;
 import co.unicauca.patterns.patronfacade.access.IOrderRepository;
 import co.unicauca.patterns.patronfacade.domain.Customer;

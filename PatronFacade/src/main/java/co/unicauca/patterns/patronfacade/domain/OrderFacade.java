@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronfacade.domain.presentacion;
+package co.unicauca.patterns.patronfacade.domain;
 
 import co.unicauca.patterns.patronfacade.access.IOrderRepository;
-import co.unicauca.patterns.patronfacade.domain.Customer;
-import co.unicauca.patterns.patronfacade.domain.Dish;
-import co.unicauca.patterns.patronfacade.domain.Item;
-import co.unicauca.patterns.patronfacade.domain.Order;
 import co.unicauca.patterns.patronfacade.domain.order.stat.State;
-import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
-
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 /**
  *
  * @author kevith bastidas
@@ -23,6 +18,7 @@ public class OrderFacade {
     
     public void createOrder(Customer customer){
         this.order = new Order(customer);
+        changeState(State.NEW);
     }
     
     public void addDish(Dish dish, int amount){
@@ -37,7 +33,7 @@ public class OrderFacade {
     }
     
     public void cancelOrder(){
-        
+        changeState(State.CANCELLED);
     }
     public int calculateTotal(){
         int total = 0;
@@ -64,10 +60,9 @@ public class OrderFacade {
     public void save(IOrderRepository repo){
         repo.createOrder(order);
         
-//        Logger logger= LoggerFactory.getLogger(Order.class); 
+//        Logger logger= LoggerFactory.getLogger(OrderFacade.class); 
 //        
 //        String message = "Pedido guardado en la base de datos";   
-//        logger.info(message);
-//        
+//        logger.info(message); 
     }
 }
