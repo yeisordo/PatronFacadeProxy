@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronproxy.domain;
+package co.unicauca.patterns.facade.domain.order;
 
-import co.unicauca.patterns.patronproxy.access.IOrderRepository;
-import co.unicauca.patterns.patronproxy.domain.order.stat.State;
+import co.unicauca.patterns.proxy.IOrderService;
+import co.unicauca.patterns.facade.access.IOrderRepository;
 /**
  *
  * @author kevith bastidas

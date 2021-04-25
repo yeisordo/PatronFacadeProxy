@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronproxy.presentacion;
+package co.unicauca.patterns.facade.presentacion;
 
-import co.unicauca.patterns.patronproxy.domain.Customer;
-import co.unicauca.patterns.patronproxy.domain.Dish;
-import co.unicauca.patterns.patronproxy.domain.IOrderService;
-import co.unicauca.patterns.patronproxy.domain.OrderFacade;
-import co.unicauca.patterns.patronproxy.domain.OrderServiceLogger;
-import co.unicauca.patterns.patronproxy.domain.ProxyClient;
-import co.unicauca.patterns.patronproxy.domain.order.stat.State;
+import co.unicauca.patterns.facade.domain.order.Customer;
+import co.unicauca.patterns.facade.domain.order.Dish;
+import co.unicauca.patterns.proxy.IOrderService;
+import co.unicauca.patterns.facade.domain.order.OrderFacade;
+import co.unicauca.patterns.proxy.OrderServiceLogger;
+import co.unicauca.patterns.proxy.ProxyClient;
+import co.unicauca.patterns.facade.domain.order.State;
 
 
 /**

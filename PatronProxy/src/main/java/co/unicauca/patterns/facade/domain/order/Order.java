@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronproxy.domain;
+package co.unicauca.patterns.facade.domain.order;
 
-import co.unicauca.patterns.patronproxy.domain.order.stat.State;
 import java.time.LocalDate;
 import java.util.ArrayList;
 

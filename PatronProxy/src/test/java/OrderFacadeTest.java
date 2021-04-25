@@ -5,10 +5,10 @@
  */
 
 
-import co.unicauca.patterns.patronproxy.domain.Customer;
-import co.unicauca.patterns.patronproxy.domain.Dish;
-import co.unicauca.patterns.patronproxy.domain.OrderFacade;
-import co.unicauca.patterns.patronproxy.domain.order.stat.State;
+import co.unicauca.patterns.facade.domain.order.Customer;
+import co.unicauca.patterns.facade.domain.order.Dish;
+import co.unicauca.patterns.facade.domain.order.OrderFacade;
+import co.unicauca.patterns.facade.domain.order.State;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

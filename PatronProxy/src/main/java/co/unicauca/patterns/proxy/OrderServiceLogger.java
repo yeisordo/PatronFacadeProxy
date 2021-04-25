@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronproxy.domain;
+package co.unicauca.patterns.proxy;
 
-import co.unicauca.patterns.patronproxy.access.IOrderRepository;
+import co.unicauca.patterns.proxy.IOrderService;
+import co.unicauca.patterns.facade.access.IOrderRepository;
+import co.unicauca.patterns.facade.domain.order.OrderFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +16,7 @@ import org.slf4j.LoggerFactory;
  * @author kevit
  */
 public class OrderServiceLogger implements IOrderService{
-    private final OrderFacade orderFacade;
+    private OrderFacade orderFacade;
 
     public OrderServiceLogger(OrderFacade orderFacade) {
         this.orderFacade = orderFacade;
@@ -22,11 +24,10 @@ public class OrderServiceLogger implements IOrderService{
     
     @Override
     public void save(IOrderRepository repo) {
-        repo.createOrder(orderFacade.getOrder());
-        
         //Se hace el log
-        Logger logger= LoggerFactory.getLogger(OrderFacade.class); 
-        
+        Logger logger= LoggerFactory.getLogger(OrderServiceLogger.class); 
+        orderFacade.save(repo);
+
         String message = "Pedido guardado en la base de datos";   
         logger.info(message); 
     }
