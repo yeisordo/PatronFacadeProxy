@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.patterns.patronfacade.domain.presentacion;
+package co.unicauca.patterns.patronfacade.presentacion;
 
 import co.unicauca.patterns.patronfacade.domain.OrderFacade;
 import co.unicauca.patterns.patronfacade.access.Factory;
