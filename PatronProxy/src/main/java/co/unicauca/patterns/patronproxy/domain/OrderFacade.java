@@ -7,13 +7,11 @@ package co.unicauca.patterns.patronproxy.domain;
 
 import co.unicauca.patterns.patronproxy.access.IOrderRepository;
 import co.unicauca.patterns.patronproxy.domain.order.stat.State;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
 /**
  *
  * @author kevith bastidas
  */
-public class OrderFacade {
+public class OrderFacade implements IOrderService{
     private Order order;
     
     public void createOrder(Customer customer){
@@ -53,12 +51,8 @@ public class OrderFacade {
         return totalDish;
     }
     
+    @Override
     public void save(IOrderRepository repo){
         repo.createOrder(order);
-        
-//        Logger logger= LoggerFactory.getLogger(OrderFacade.class); 
-//        
-//        String message = "Pedido guardado en la base de datos";   
-//        logger.info(message); 
     }
 }
